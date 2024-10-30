@@ -1,10 +1,9 @@
-def test_function():
+def test_function():  # облемлющая  функция для функции inner_function()
     def inner_function():
-            print("Я в области видимости функции test_function")
+        print(f"Я в области видимости функции test_function")
+
     inner_function()
 
-test_function()
-#inner_function()
- #   ^^^^^^^^^^^^^^
-#NameError: name 'inner_function' is not defined. Did you mean: 'test_function'?
 
+test_function()
+# Вызов функции  вне функции test_function приводит к появлению ошибки из-за различия пространства имён
